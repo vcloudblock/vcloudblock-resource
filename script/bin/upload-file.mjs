@@ -5,7 +5,7 @@
  * Upload a file to.digital ocean spaces.
  * use --filePath to specify the file path, e.g: --filePath=test.zip
  * use --endPoint to specify address of digital ocean spaces, e.g: --endPoint=https://sgp1.digitaloceanspaces.com
- * use --bucket to specify the bucket name, e.g: --bucket=openblock
+ * use --bucket to specify the bucket name, e.g: --bucket=vcloudblock
  */
 import {S3, PutObjectCommand} from '@aws-sdk/client-s3';
 import fs from 'fs';

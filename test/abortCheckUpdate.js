@@ -1,8 +1,8 @@
-const OpenblockResourceServer = require('../index');
+const VCloudBlockResourceServer = require('../index');
 const clc = require('cli-color');
 const {AbortController} = require('node-abort-controller');
 
-const resourceServer = new OpenblockResourceServer();
+const resourceServer = new VCloudBlockResourceServer();
 const controller = new AbortController();
 
 // Test the check update abort funciton.

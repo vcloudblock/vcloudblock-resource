@@ -3,9 +3,9 @@
 /**
  * @fileoverview
  * Fetch the latest release info and upload it to digital ocean spaces.
- * use --repo to specify the repo of github repository, e.g: --repo=openblockcc/external-resources-v2
+ * use --repo to specify the repo of github repository, e.g: --repo=vcloudblock/external-resources-v2
  * use --endPoint to specify address of digital ocean spaces, e.g: --endPoint=https://sgp1.digitaloceanspaces.com
- * use --bucket to specify the bucket name, e.g: --bucket=openblock
+ * use --bucket to specify the bucket name, e.g: --bucket=vcloudblock
  */
 import fetch from 'node-fetch';
 import {S3, PutObjectCommand} from '@aws-sdk/client-s3';

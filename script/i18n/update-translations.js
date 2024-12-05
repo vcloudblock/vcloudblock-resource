@@ -12,8 +12,8 @@
 const fs = require('fs');
 const path = require('path');
 const Walk = require('@root/walk');
-const locales = require('openblock-l10n').default;
-const {txPull} = require('openblock-l10n/lib/transifex.js');
+const locales = require('vcloudblock-l10n').default;
+const {txPull} = require('vcloudblock-l10n/lib/transifex.js');
 const validateTranslations = require('../lib/validate');
 const parseArgs = require('../lib/parseArgs');
 const isOfficial = require('../lib/is-official');
@@ -30,7 +30,7 @@ if (!process.env.TX_TOKEN) {
 }
 
 // Globals
-const PROJECT = 'openblock-resources';
+const PROJECT = 'vcloudblock-resources';
 const INTERFACE_RESOURCE = 'interface';
 const EXTENSION_RESOURCE = 'extensions';
 const BLOCKS_RESOURCE = 'blocks';

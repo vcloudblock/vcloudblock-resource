@@ -5,8 +5,8 @@ const fetch = require('node-fetch');
 const http = require('http');
 const clc = require('cli-color');
 
-const OpenBlockDevice = require('./device');
-const OpenBlockExtension = require('./extension');
+const VCloudBlockDevice = require('./device');
+const VCloudBlockExtension = require('./extension');
 const {
     DEFAULT_HOST,
     DEFAULT_PORT,
@@ -20,7 +20,7 @@ const {
 class ResourceServer extends Emitter{
 
     /**
-     * Construct a OpenBlock resource server object.
+     * Construct a VCloudBlock resource server object.
      * @param {string} cacheResourcesPath - the path of cache resources.
      * @param {string} builtinResourcesPath - the path of builtin resources.
      */
@@ -32,8 +32,8 @@ class ResourceServer extends Emitter{
         this._host = DEFAULT_HOST;
         this._port = DEFAULT_PORT;
 
-        this.extensions = new OpenBlockExtension();
-        this.devices = new OpenBlockDevice();
+        this.extensions = new VCloudBlockExtension();
+        this.devices = new VCloudBlockDevice();
 
         this._formatMessage = {};
         this.deviceIndexData = {};
@@ -146,13 +146,13 @@ class ResourceServer extends Emitter{
         });
 
         this._server.listen(this._port, this._host, () => {
-            console.log(clc.green(`Openblock resource server start successfully, socket listen on: http://${this._host}:${this._port}`));
+            console.log(clc.green(`VCloudBlock resource server start successfully, socket listen on: http://${this._host}:${this._port}`));
             this.emit('ready');
         })
             .on('error', err => {
                 this.isSameServer('127.0.0.1', this._port).then(isSame => {
                     if (isSame) {
-                        console.log(`Port is already used by other openblock-resource server, will try reopening after ${REOPEN_INTERVAL} ms`); // eslint-disable-line max-len
+                        console.log(`Port is already used by other vcloudblock-resource server, will try reopening after ${REOPEN_INTERVAL} ms`); // eslint-disable-line max-len
                         setTimeout(() => {
                             this._server.close();
                             this._server.listen(this._port, this._host);

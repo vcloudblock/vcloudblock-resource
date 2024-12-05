@@ -32,6 +32,7 @@ const getLatest = () => {
     let url;
     if (plat === 'github' || !plat) {
         url = `https://api.github.com/repos/${repo}/releases/latest`;
+      
     } else if (plat === 'gitee') {
         url = `https://gitee.com/api/v5/repos/${repo}//releases/latest`;
     }
@@ -39,9 +40,15 @@ const getLatest = () => {
         url = `${cdn}/${url}`;
     }
 
+
+    console.log(" >>  "+url)
+
     return new Promise((resolve, reject) => {
         fetch(url)
-            .then(res => resolve(res.json()))
+            .then(res => {
+                resolve(res.json())
+                
+            })
             .catch(err => reject(err));
     });
 };
@@ -50,9 +57,16 @@ const download = (url, dest) => {
     const green = '\u001b[42m \u001b[0m';
     const red = '\u001b[41m \u001b[0m';
 
+  
+
     if (cdn) {
         url = `${cdn}/${url}`;
     }
+
+
+    console.log(url)
+    console.log(dest)
+
 
     return new Promise((resolve, reject) => {
         const bar = new ProgressBar('downloading [:bar] :tokenSpeed    :tokenSize   :tokenRemaining', {
@@ -103,6 +117,8 @@ getLatest()
 
         let resource;
         let checksum;
+
+        console.log(assets)
 
         assets.forEach(asset => {
             if (asset.name) {

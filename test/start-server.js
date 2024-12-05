@@ -1,7 +1,7 @@
-const OpenblockResourceServer = require('../index');
+const VCloudBlockResourceServer = require('../index');
 const clc = require('cli-color');
 
-const resourceServer = new OpenblockResourceServer();
+const resourceServer = new VCloudBlockResourceServer();
 
 // Start server
 resourceServer.listen();

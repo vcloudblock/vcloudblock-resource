@@ -1,8 +1,8 @@
-const OpenblockResourceServer = require('../index');
+const VCloudBlockResourceServer = require('../index');
 const clc = require('cli-color');
 
-const resourceServer1 = new OpenblockResourceServer();
-const resourceServer2 = new OpenblockResourceServer();
+const resourceServer1 = new VCloudBlockResourceServer();
+const resourceServer2 = new VCloudBlockResourceServer();
 
 // Test the anti-duplicate update function of the updater.
 resourceServer1.checkUpdate()
