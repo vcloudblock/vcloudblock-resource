@@ -47,8 +47,8 @@
     "node-abort-controller": "^3.0.1",
     "node-fetch": "^2.7.0",
     "node-fetch-progress": "^1.0.2",
-    "vcloudblock-l10n": "^3.15.0",
-    "vcloudblock-parse-release-message": "0.0.1",
+    "vcloudblock-l10n": "file://D:/vcloudblock/locallibs/vcloudblock-l10n-3.15.0.tgz",
+    "vcloudblock-parse-release-message": "file://D:/vcloudblock/locallibs/vcloudblock-parse-release-message-0.0.4.tgz",
     "proper-lockfile": "^4.1.2",
     "require-all": "^3.0.0"
   },
