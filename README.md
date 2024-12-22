@@ -1,9 +1,9 @@
-# openblock-resource
+# vcloudblock-resource
 
-[![Publish npm package](https://github.com/openblockcc/openblock-resource/actions/workflows/publish.yml/badge.svg)](https://github.com/openblockcc/openblock-resource/actions/workflows/publish.yml)
-![GitHub](https://img.shields.io/github/license/openblockcc/openblock-resource)
+[![Publish npm package](https://github.com/vcloudblock/vcloudblock-resource/actions/workflows/publish.yml/badge.svg)](https://github.com/vcloudblock/vcloudblock-resource/actions/workflows/publish.yml)
+![GitHub](https://img.shields.io/github/license/vcloudblock/vcloudblock-resource)
 
-Provide a local resource server for openblock.
+Provide a local resource server for vcloudblock.
 
 ## Instructions
 
